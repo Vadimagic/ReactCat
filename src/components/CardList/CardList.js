@@ -1,4 +1,5 @@
 import Card from "../Card/Card"
+import './CardList.scss'
 
 const CardList = ({cards}) => {
 	return (
