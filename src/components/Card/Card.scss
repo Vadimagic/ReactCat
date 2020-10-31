@@ -49,6 +49,11 @@
 			background: #2EA8E6;
 			transition: background .3s ease-in;
 		}
+
+		.card__circle {
+			background: #2EA8E6;
+			transition: background .3s ease-in;
+		}
 	}
 
 	// Elem
@@ -124,13 +129,13 @@
 			transition: background .3s ease-in;
 		}
 
-		.card__oval {
+		.card__circle {
 			background: #E52E7A;
 			transition: background .3s ease-in;
 		}
 	}
 
-	.card__oval {
+	.card__circle {
 		background: #D91667;
 	}
 }
@@ -162,7 +167,7 @@
 			background: #B3B3B3;
 		}
 
-		.card__oval {
+		.card__circle {
 			background: #B3B3B3;
 		}
 	}
@@ -171,7 +176,7 @@
 		color: #B3B3B3;
 	}
 
-	.card__oval {
+	.card__circle {
 		background: #B3B3B3;
 	}
 }

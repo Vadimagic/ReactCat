@@ -55,10 +55,17 @@ class App extends Component {
 	}
 
 	render() {
+		const changeCardSelectedHandler = index => {
+			const stateCopy = {...this.state};
+			stateCopy.cards[index].selected = !this.state.cards[index].selected
+
+			this.setState(stateCopy)
+		}
+
 		return (
 			<div className="app">
 				<div className="app__title title">Ты сегодня покормил кота?</div>
-				<CardList cards={this.state.cards}/>
+				<CardList cards={this.state.cards} changeCardSelected={changeCardSelectedHandler}/>
 			</div>
 		)
 	}
