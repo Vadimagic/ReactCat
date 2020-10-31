@@ -6,7 +6,7 @@ class App extends Component {
 	state = {
 		cards: [
 			{
-				preTitle: 'Сказочное заморское яство',
+				pretitle: 'Сказочное заморское яство',
 				title: 'Нямушка',
 				taste: 'с фуа-гра',
 				presents: [
@@ -21,7 +21,7 @@ class App extends Component {
 				disabled: false
 			},
 			{
-				preTitle: 'Сказочное заморское яство',
+				pretitle: 'Сказочное заморское яство',
 				title: 'Нямушка',
 				taste: 'с рыбой',
 				presents: [
@@ -33,10 +33,10 @@ class App extends Component {
 				descriptionSelected: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
 				descriptionDisabled: 'Печалька, с рыбой закончился.',
 				selected: true,
-				disabled: true
+				disabled: false
 			},
 			{
-				preTitle: 'Сказочное заморское яство', 
+				pretitle: 'Сказочное заморское яство', 
 				title: 'Нямушка',
 				taste: 'с курой',
 				presents: [

@@ -8,3 +8,195 @@
 	display: inline-block;
 	width: 320px;
 }
+
+.card-block__card {
+	margin-bottom: 14px;
+}
+
+.card {
+	width: 320px;
+	height: 480px;
+	box-sizing: border-box;
+	box-shadow:inset 0px 0px 0px 4px #1698D9;
+	border-radius: 10px;
+	background: url('../../img/Cat.png') 0 100% no-repeat #F2F2F2;
+	padding: 21px 51px;
+	position: relative;
+	clip-path: polygon(0 45px, 0 100%, 100% 100%, 100% 0, 45px 0);
+	overflow: hidden;
+	cursor: pointer;
+	transition: box-shadow .3s;
+
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		top: -22px;
+		left: 10px;
+		width: 10px;
+		height: 100px;
+		background: #1698D9;
+		transform: rotate(45deg);
+		z-index: 2;
+		transition: background .3s;
+	}
+
+	&:hover {
+		box-shadow:inset 0px 0px 0px 4px #2EA8E6;
+		transition: box-shadow .3s ease-in;
+
+		&::after {
+			background: #2EA8E6;
+			transition: background .3s ease-in;
+		}
+	}
+
+	// Elem
+
+	&__pretitle {
+		font-size: 16px;
+		line-height: 19px;
+		color: #666666;
+		margin-bottom: 5px;
+	}
+
+	&__title {
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	&__taste {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 15px;
+	}
+
+	&__present {
+		font-size: 14px;
+		line-height: 16px;
+		color: #666666;
+	}
+	
+	&__circle {
+		position: absolute;
+		width: 80px;
+		height: 80px;
+		right: 16px;
+		bottom: 16px;
+		border-radius: 50%;
+		background: #1698D9;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		transition: background .3s;
+	}
+
+	&__weight {
+		font-size: 42px;
+		line-height: 42px;
+		color: #FFF
+	}
+
+	&__unit {
+		font-size: 16px;
+		color: #FFF;
+	}
+}
+
+.card_selected {
+	box-shadow:inset 0px 0px 0px 4px #D91667;
+
+	&::after {
+		background: #D91667;
+	}
+
+	&:hover {
+		box-shadow:inset 0px 0px 0px 4px #E52E7A;
+		transition: box-shadow .3s ease-in;
+
+		&::after {
+			background: #E52E7A;
+			transition: background .3s ease-in;
+		}
+
+		.card__oval {
+			background: #E52E7A;
+			transition: background .3s ease-in;
+		}
+	}
+
+	.card__oval {
+		background: #D91667;
+	}
+}
+
+.card_disabled {
+	box-shadow: inset 0px 0px 0px 4px #B3B3B3;
+	color: #B3B3B3;
+
+	&::after {
+		background: #B3B3B3;
+	}
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: '';
+		height: 100%;
+		width: 100%;
+		z-index: 5;
+		background: rgba(255, 255, 255, 0.6);
+	}
+
+	&:hover {
+		box-shadow:inset 0px 0px 0px 4px #B3B3B3;
+		cursor: no-drop;
+
+		&::after {
+			background: #B3B3B3;
+		}
+
+		.card__oval {
+			background: #B3B3B3;
+		}
+	}
+
+	.card_pretitle {
+		color: #B3B3B3;
+	}
+
+	.card__oval {
+		background: #B3B3B3;
+	}
+}
+
+.description {
+	font-size: 13px;
+	line-height: 15px;
+	text-align: center;
+	color: #FFFFFF;
+
+	// Elem
+
+	&__buy {
+		font-weight: bold;
+		color: #22A7E9;
+		cursor: pointer;
+	}
+
+	&__click {
+		border-bottom: 1px dashed #22A7E9;
+	}
+
+	// Mod
+
+	&_disabled {
+		color: #FFFF66
+	}
+}
