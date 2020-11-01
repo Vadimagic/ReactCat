@@ -41,21 +41,6 @@
 		transition: background .3s;
 	}
 
-	&:hover {
-		box-shadow:inset 0px 0px 0px 4px #2EA8E6;
-		transition: box-shadow .3s ease-in;
-
-		&::after {
-			background: #2EA8E6;
-			transition: background .3s ease-in;
-		}
-
-		.card__circle {
-			background: #2EA8E6;
-			transition: background .3s ease-in;
-		}
-	}
-
 	// Elem
 
 	&__pretitle {
@@ -113,14 +98,34 @@
 	}
 }
 
+.card_default {
+	&:hover {
+		box-shadow:inset 0px 0px 0px 4px #2EA8E6;
+		transition: box-shadow .3s ease-in;
+
+		&::after {
+			background: #2EA8E6;
+			transition: background .3s ease-in;
+		}
+
+		.card__circle {
+			background: #2EA8E6;
+			transition: background .3s ease-in;
+		}
+	}
+}
+
 .card_selected {
 	box-shadow:inset 0px 0px 0px 4px #D91667;
 
 	&::after {
 		background: #D91667;
 	}
+	.card__circle {
+		background: #D91667;
+	}
 
-	&:hover {
+	&-mouseleave {
 		box-shadow:inset 0px 0px 0px 4px #E52E7A;
 		transition: box-shadow .3s ease-in;
 
@@ -135,9 +140,7 @@
 		}
 	}
 
-	.card__circle {
-		background: #D91667;
-	}
+	
 }
 
 .card_disabled {

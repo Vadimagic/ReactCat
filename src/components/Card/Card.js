@@ -1,11 +1,19 @@
 import './Card.scss'
 
-const Card = ({card, changeSelected, index}) => {
+const Card = ({card, changeSelected, mouseLeave, index}) => {
 	return (
-		<div className="card-list__card-block card-block">
+		<div 
+			className="card-list__card-block card-block" 
+			onMouseLeave={() => card.selected && !card.selectedMouse ? mouseLeave(index) : null}
+		>
 			<div 
-				className={`card-block__card card ${card.selected ? 'card_selected' : ''} ${card.disabled ? 'card_disabled' : ''}`}
-				onClick={() => changeSelected(index)}
+				className={
+					`card-block__card card 
+					${card.selected ? 'card_selected' : 'card_default'} 
+					${card.disabled ? 'card_disabled' : ''} 
+					${card.selectedMouse ? 'card_selected-mouseleave' : ''}`
+				}
+				onClick={() => card.disabled || changeSelected(index)}
 			>
 				<div className="card__pretitle">{card.pretitle}</div>
 				<div className="card__title">{card.title}</div>

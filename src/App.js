@@ -17,8 +17,9 @@ class App extends Component {
 				unit: 'КГ',
 				descriptionSelected: 'Печень утки разварная с артишоками.',
 				descriptionDisabled: 'Печалька, с фуа-гра закончился.',
+				disabled: false,
 				selected: false,
-				disabled: false
+				selectedMouse: false
 			},
 			{
 				pretitle: 'Сказочное заморское яство',
@@ -32,8 +33,9 @@ class App extends Component {
 				unit: 'КГ',
 				descriptionSelected: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
 				descriptionDisabled: 'Печалька, с рыбой закончился.',
+				disabled: false,
 				selected: true,
-				disabled: false
+				selectedMouse: true
 			},
 			{
 				pretitle: 'Сказочное заморское яство', 
@@ -48,16 +50,28 @@ class App extends Component {
 				unit: 'КГ',
 				descriptionSelected: 'Филе из цыплят с трюфелями в бульоне.',
 				descriptionDisabled: 'Печалька, с рыбой закончился.',
+				disabled: true,
 				selected: false,
-				disabled: true
+				selectedMouse: false
 			}
 		]
 	}
 
 	render() {
 		const changeCardSelectedHandler = index => {
-			const stateCopy = {...this.state};
+			const stateCopy = {...this.state}
 			stateCopy.cards[index].selected = !this.state.cards[index].selected
+
+			if (!stateCopy.cards[index].selected) {
+				stateCopy.cards[index].selectedMouse = false
+			}
+
+			this.setState(stateCopy)
+		}
+
+		const mouseLeaveSelectedHandler = index => {
+			const stateCopy = {...this.state}
+			stateCopy.cards[index].selectedMouse = true
 
 			this.setState(stateCopy)
 		}
@@ -65,7 +79,7 @@ class App extends Component {
 		return (
 			<div className="app">
 				<div className="app__title title">Ты сегодня покормил кота?</div>
-				<CardList cards={this.state.cards} changeCardSelected={changeCardSelectedHandler}/>
+				<CardList cards={this.state.cards} changeCardSelected={changeCardSelectedHandler} mouseLeaveSelected={mouseLeaveSelectedHandler}/>
 			</div>
 		)
 	}

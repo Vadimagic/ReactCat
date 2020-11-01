@@ -3,6 +3,14 @@
 	src: url(./font/Exo2.0-Thin.otf);
 }
 
+.app {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 .app__title {
 	margin: 36px 0 0 0;	
 }
