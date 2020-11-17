@@ -1,3 +1,4 @@
+import Description from '../Description/Description'
 import './Card.scss'
 
 const Card = ({card, changeSelected, mouseLeave, index}) => {
@@ -28,20 +29,7 @@ const Card = ({card, changeSelected, mouseLeave, index}) => {
 					<span className="card__unit">{card.unit}</span>
 				</div>
 			</div>
-			<span className={`description ${card.disabled ? 'description_disabled' : card.selected ? '' : 'description_bold'}`}>
-				{
-					card.disabled
-					? card.descriptionDisabled
-					: card.selected
-						? card.descriptionSelected
-						: <>
-							Чего сидишь? Порадуй котэ,&nbsp;
-							<span className="description__buy">
-								<span className="description__click" onClick={() => changeSelected(index)}>купи</span>.
-							</span>
-						</>
-				}
-			</span>
+			<Description card={card} changeSelected={changeSelected} index={index}/>
 		</div>
 	)
 }

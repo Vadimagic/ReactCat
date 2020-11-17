@@ -185,32 +185,3 @@
 		background: #B3B3B3;
 	}
 }
-
-.description {
-	display: block;
-	font-size: 13px;
-	line-height: 15px;
-	text-align: center;
-	color: #FFFFFF;
-
-	// Elem
-
-	&__buy {
-		color: #22A7E9;
-		cursor: pointer;
-	}
-
-	&__click {
-		border-bottom: 1px dashed #22A7E9;
-	}
-
-	// Mod
-
-	&_disabled {
-		color: #FFFF66
-	}
-
-	&_bold  {
-		font-weight: 700;
-	}
-}
