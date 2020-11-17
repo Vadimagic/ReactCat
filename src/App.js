@@ -13,7 +13,7 @@ class App extends Component {
 					'10 порций',
 					'мышь в подарок'
 				],
-				weight: 0.5,
+				weight: '0,5',
 				unit: 'КГ',
 				descriptionSelected: 'Печень утки разварная с артишоками.',
 				descriptionDisabled: 'Печалька, с фуа-гра закончился.',

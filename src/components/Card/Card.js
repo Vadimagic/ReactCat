@@ -15,20 +15,20 @@ const Card = ({card, changeSelected, mouseLeave, index}) => {
 				}
 				onClick={() => card.disabled || changeSelected(index)}
 			>
-				<div className="card__pretitle">{card.pretitle}</div>
-				<div className="card__title">{card.title}</div>
-				<div className="card__taste">{card.taste}</div>
+				<span className="card__pretitle">{card.pretitle}</span>
+				<h3 className="card__title">{card.title}</h3>
+				<span className="card__taste">{card.taste}</span>
 				{
 					card.presents.map((present, index) => (
-						<div className="card__present" key={index}>{present}</div>
+						<span className="card__present" key={index}>{present}</span>
 					))
 				}
 				<div className={`card__circle`}>
-					<div className="card__weight">{card.weight}</div>
-					<div className="card__unit">{card.unit}</div>
+					<span className="card__weight">{card.weight}</span>
+					<span className="card__unit">{card.unit}</span>
 				</div>
 			</div>
-			<div className={`description ${card.disabled ? 'description_disabled' : ''}`}>
+			<span className={`description ${card.disabled ? 'description_disabled' : card.selected ? '' : 'description_bold'}`}>
 				{
 					card.disabled
 					? card.descriptionDisabled
@@ -41,7 +41,7 @@ const Card = ({card, changeSelected, mouseLeave, index}) => {
 							</span>
 						</>
 				}
-			</div>
+			</span>
 		</div>
 	)
 }

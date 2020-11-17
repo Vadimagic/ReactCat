@@ -1,6 +1,5 @@
 .card-list__card-block {
-	padding: 0 25px;
-	margin: 25px auto 0 auto;
+	margin-top: 25px;
 	font-family: Trebuchet MS;
 }
 
@@ -44,6 +43,7 @@
 	// Elem
 
 	&__pretitle {
+		display: block;
 		font-size: 16px;
 		line-height: 19px;
 		color: #666666;
@@ -59,6 +59,7 @@
 	}
 
 	&__taste {
+		display: block;
 		font-weight: bold;
 		font-size: 24px;
 		line-height: 28px;
@@ -66,6 +67,7 @@
 	}
 
 	&__present {
+		display: block;
 		font-size: 14px;
 		line-height: 16px;
 		color: #666666;
@@ -185,6 +187,7 @@
 }
 
 .description {
+	display: block;
 	font-size: 13px;
 	line-height: 15px;
 	text-align: center;
@@ -193,7 +196,6 @@
 	// Elem
 
 	&__buy {
-		font-weight: bold;
 		color: #22A7E9;
 		cursor: pointer;
 	}
@@ -206,5 +208,9 @@
 
 	&_disabled {
 		color: #FFFF66
+	}
+
+	&_bold  {
+		font-weight: 700;
 	}
 }
