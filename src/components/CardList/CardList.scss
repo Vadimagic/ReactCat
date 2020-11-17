@@ -5,11 +5,12 @@
 .card-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	-ms-justify-content: space-between;
 	width: 100%;
 	&::before,
 	&::after {
-		content: "";
-		display: block;
+		-ms-content: "";
+		-ms-display: block;
 	}
 }
