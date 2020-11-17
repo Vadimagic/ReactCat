@@ -1,4 +1,4 @@
-import Card from "../Card/Card"
+import CardBlock from "../CardBlock/CardBlock"
 import './CardList.scss'
 
 const CardList = ({cards, changeCardSelected, mouseLeaveSelected}) => {
@@ -6,7 +6,7 @@ const CardList = ({cards, changeCardSelected, mouseLeaveSelected}) => {
 		<div className="app__card-list card-list">
 			{
 				cards.map((card, index) => (
-					<Card card={card} key={index} index={index} changeSelected={changeCardSelected} mouseLeave={mouseLeaveSelected}/>
+					<CardBlock card={card} key={index} index={index} changeSelected={changeCardSelected} mouseLeave={mouseLeaveSelected}/>
 				))
 			}
 		</div>
